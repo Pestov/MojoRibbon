@@ -9,21 +9,21 @@
 		@degree: -@deg;
 		top: @countHeight;
 		left: @countWidth;	
-		-webkit-transform: rotate(@degree);
-		-moz-transform: rotate(@degree);
-		-o-transform: rotate(@degree);
-		-ms-transform: rotate(@degree);
-		transform: rotate(@degree);
+		-webkit-transform: rotate(@deg);
+		-moz-transform: rotate(@deg);
+		-o-transform: rotate(@deg);
+		-ms-transform: rotate(@deg);
+		transform: rotate(@deg);
 	};
 	.defineDegree(@deg, @valign) when (@deg < 0) and (@valign = bottom) {
 		@degree: -@deg;
 		bottom: @countHeight;
 		right: @countWidth;	
-		-webkit-transform: rotate(@degree);
-		-moz-transform: rotate(@degree);
-		-o-transform: rotate(@degree);
-		-ms-transform: rotate(@degree);
-		transform: rotate(@degree);
+		-webkit-transform: rotate(@deg);
+		-moz-transform: rotate(@deg);
+		-o-transform: rotate(@deg);
+		-ms-transform: rotate(@deg);
+		transform: rotate(@deg);
 	};
 	.defineDegree(@deg, @valign) when (@deg > 0) and (@valign = top) {
 		@degree: @deg;
