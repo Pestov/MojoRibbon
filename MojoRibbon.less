@@ -1,0 +1,62 @@
+.MojoRibbon(@width, @height, @deg, @valign) {
+	width: @width;
+	height: @height;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	.defineDegree(@deg, @valign) when (@deg < 0) and (@valign = top) {
+		@degree: -@deg;
+		top: @countHeight;
+		left: @countWidth;	
+		-webkit-transform: rotate(@degree);
+		-moz-transform: rotate(@degree);
+		-o-transform: rotate(@degree);
+		-ms-transform: rotate(@degree);
+		transform: rotate(@degree);
+	};
+	.defineDegree(@deg, @valign) when (@deg < 0) and (@valign = bottom) {
+		@degree: -@deg;
+		bottom: @countHeight;
+		right: @countWidth;	
+		-webkit-transform: rotate(@degree);
+		-moz-transform: rotate(@degree);
+		-o-transform: rotate(@degree);
+		-ms-transform: rotate(@degree);
+		transform: rotate(@degree);
+	};
+	.defineDegree(@deg, @valign) when (@deg > 0) and (@valign = top) {
+		@degree: @deg;
+		top: @countHeight;
+		right: @countWidth;
+		-webkit-transform: rotate(@degree);
+		-moz-transform: rotate(@degree);
+		-o-transform: rotate(@degree);
+		-ms-transform: rotate(@degree);
+		transform: rotate(@degree);
+	};
+	.defineDegree(@deg, @valign) when (@deg > 0) and (@valign = bottom) {
+		@degree: @deg;
+		bottom: @countHeight;
+		left: @countWidth;
+		-webkit-transform: rotate(@degree);
+		-moz-transform: rotate(@degree);
+		-o-transform: rotate(@degree);
+		-ms-transform: rotate(@degree);
+		transform: rotate(@degree);
+	};
+	.defineDegree(@deg, @valign) when (@deg = 0) {
+		@degree: @deg;
+		top: 0;
+		left: 0;
+	};
+	.defineDegree(@deg, @valign);
+	@angleB: 90-@degree;
+	@angleB2: @angleB;
+	@sideA: round(sin(@degree), 3)*@width;
+	@sideB: round(sin(@angleB), 3)*@width;
+	@sideB2: round(sin(@angleB2), 3)*@height;
+	@sideA2: round(sin(@degree), 3)*@height;
+	@countHeight: @sideA/2 - @height/2 - @sideB2/2;
+	@countWidth: -((@width)-(@sideB))/2 - @sideA2/2;	
+}
