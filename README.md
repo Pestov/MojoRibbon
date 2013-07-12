@@ -3,11 +3,11 @@ MojoRibbon
 
 Geometrically correct LESS ribbon
 
-A = sin(a) * C или A = sin(65) * 500;
-B = sin(b) * C или B = sin(25) * 500;
-
-A2 = sin(a2) * C2 или A2 = sin(65) * 50;
-B2 = sin(b2) * C2 или B2 = sing(25) * 50; 
+A = sin(a) * C or A = sin(65) * 500; <br>
+B = sin(b) * C or B = sin(25) * 500; <br>
+<br>
+A2 = sin(a2) * C2 or A2 = sin(65) * 50; <br>
+B2 = sin(b2) * C2 or B2 = sing(25) * 50; <br>
 <img src="http://img-fotki.yandex.ru/get/9154/188626415.0/0_c0d90_2a74afc9_orig">
 
 <h3>Usage:</h3>
@@ -22,5 +22,5 @@ B2 = sin(b2) * C2 или B2 = sing(25) * 50;
 	box-shadow: 0 0 10px #000;
 }
 
-<a href="https://github.com/Pestov/MojoRibbon" class="ribbon">Fork me on Github</a>
+&lt;a href="https://github.com/Pestov/MojoRibbon" class="ribbon"&gt; Fork me on Github&lt;/a&gt;
 </code></pre>
